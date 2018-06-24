@@ -19,19 +19,19 @@ PY3 = sys.version_info[0] >= 3
 
 def StrToBase64(s):
     if PY3:
-        return base64.b64encode(s.encode('utf-8'))
+        return base64.b64encode(s.encode('gbk'))
     else:
         return base64.b64encode(s)
 
 def Base64ToStr(b):
     if PY3:
-        return base64.b64decode(b).decode('utf-8')
+        return base64.b64decode(b).decode('gbk')
     else:
         return base64.b64decode(b)
 
 def StrToBase64str(s):
     if PY3:
-        return StrToBase64(s).decode('utf-8')
+        return StrToBase64(s).decode('gbk')
     else:
         return StrToBase64(s)
 
@@ -99,7 +99,10 @@ def urlconvert(oldurl):
 
 def main(argv):
     if len(argv) == 1:
-        s = ['ed2k://|file|%E8%B6%8A%E7%8B%B1.Prison.Break.S05E06.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.HDTVrip.720P.mp4|485576874|9d5a883b071aa5b938410580b56388ea|h=twaamvlskb7xymdfd27vl45kqlo3b7xk|/']
+        s = [
+            'ed2k://|file|%E8%B6%8A%E7%8B%B1.Prison.Break.S05E06.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.HDTVrip.720P.mp4|485576874|9d5a883b071aa5b938410580b56388ea|h=twaamvlskb7xymdfd27vl45kqlo3b7xk|/',
+            'thunder://QUFmdHA6Ly95Z2R5ODp5Z2R5OEB5ZzQyLmR5ZHl0dC5uZXQ6ODAwMS9b0fS54rXn07B3d3cueWdkeTguY29tXS4uyfq7r86ju/qjutbV1cIuQkQuNzIwcC65+tOiy6vT7y7W0NOiy6vX1sS7Lm1rdlpa'
+            ]
     else:
         s = argv[1:]
 
