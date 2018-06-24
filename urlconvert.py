@@ -97,6 +97,15 @@ def urlconvert(oldurl):
     # ttt = ("&nbsp;&nbsp;&nbsp;<a href='javascript://' onclick='ConvertURL2FG(\""+flashgeturl+"\",\""+newurl+"\",1926)'></a>")
     # print ttt
 
+def main(argv):
+    if len(argv) == 1:
+        s = ['ed2k://|file|%E8%B6%8A%E7%8B%B1.Prison.Break.S05E06.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.HDTVrip.720P.mp4|485576874|9d5a883b071aa5b938410580b56388ea|h=twaamvlskb7xymdfd27vl45kqlo3b7xk|/']
+    else:
+        s = argv[1:]
+
+    for url in s:
+        urlconvert(url)
+        print("")
+
 if __name__ == '__main__':
-    s = 'ed2k://|file|%E8%B6%8A%E7%8B%B1.Prison.Break.S05E06.%E4%B8%AD%E8%8B%B1%E5%AD%97%E5%B9%95.HDTVrip.720P.mp4|485576874|9d5a883b071aa5b938410580b56388ea|h=twaamvlskb7xymdfd27vl45kqlo3b7xk|/'
-    urlconvert(s)
+    main(sys.argv)
