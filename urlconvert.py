@@ -69,8 +69,8 @@ def flashetencode(url):
 
 #生成QQ旋风链接
 def qqencode(url):
-    q_url='qqdl://'+StrToBase64str(url);
-    return q_url;
+    q_url='qqdl://'+StrToBase64str(url)
+    return q_url
 
 
 def urlconvert(oldurl):
